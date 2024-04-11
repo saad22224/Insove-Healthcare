@@ -1,0 +1,1058 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>medico tailwind</title>
+    <!-- css -->
+    <link rel="stylesheet" href="css/input.css">
+    <!-- icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.min.css">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- swiper css -->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+   <!-- start header -->
+   <header class="py-8 lg:pt-6 lg:pb-14" id="#Header"> 
+    <!-- py-8 = padding-top 2rem 32 and padding bottom same -->
+    <div class="container mx-auto w-[90%] lg:relative flex flex-col lg:flex-row lg:justify-between gap-y-4 lg:gap-y-0">
+      <div class="kem">
+         <i class="ri-arrow-up-circle-fill"></i>
+      </div>
+       <!-- logo -->
+      <div class="flex justify-center lg:justify-normal">
+   <a href="#">
+    <img src="./assets/assets/img/header/logo.svg" alt="">
+   </a>
+      </div>
+       <!-- logo -->
+       <div class="flex flex-col gap-y-4 lg:flex-row lg:gap-x-10 lg:gap-y-0">
+        <!-- location -->
+        <div class="flex items-center justify-center gap-x-2 lg:justify-normal">
+            <i class="ri-map-pin-2-fill text-2xl" style="color: aqua;" ></i>
+            <div style="color: #777;">
+               123 Arling, Miola, Ny
+            </div>
+        </div>
+        <!-- phone -->
+        <div class="flex items-center justify-center gap-x-2 lg:justify-normal">
+         <i class="ri-phone-fill text-2xl" style="color: aqua;"></i>
+<div  style="color: #777;">(+20) 1556477029
+</div>
+        </div>
+        <!-- btn -->
+        <button class="btn">Book Now</button>
+        <!-- mobile nav -->
+        <nav class="mnav bg-white fixed w-[250px] top-0 h-screen -left-[250px] shadow-2xl lg:hidden transition-all duration-300 z-20">
+         
+         <!-- nav triger btn -->
+         <div class="mnav__close-btn  w-8 h-8 relative -right-full top-0 flex justify-center items-center rounded-tr-lg  
+         rounded-br-lg cursor-pointer transition-all" style="background-color: rgba(0, 0, 0, 50%);">
+            <i class="mnav__close-btn-icon ri-arrow-right-s-line text-2xl  text-white"></i>
+         </div>
+         <!-- logo , list , form -->
+         <div class="px-12 flex flex-col gap-y-12 h-full">
+   <!-- logo -->
+   <a href="#">
+      <img src="assets/assets/img/header/logo.svg" alt="">
+   </a>
+   <!-- list -->
+   <ul class="flex flex-col gap-y-5">
+      <li><a href="#Header" style="color: #27272a"  class="my-element transition-all duration-300">Home</a></li>
+      <li><a href="#doctors" style="color: #27272a;"  class="my-element transition-all duration-300">Doctors</a></li>
+      <li><a href="#department" style="color: #27272a;"  class="my-element transition-all duration-300">Department</a></li>
+      <li><a href="#services" style="color: #27272a;"  class="my-element transition-all duration-300">Services</a></li>
+      <li><a href="#blog" style="color: #27272a;"  class="my-element transition-all duration-300">Blog</a></li>
+      <li><a href="#contact" style="color: #27272a;"  class="my-element transition-all duration-300">Contact</a></li>
+   </ul>
+   <!-- form -->
+   <form action="" class="relative flex gap-x-[10px]">
+      <label for="mnav-search">
+         <i class="ri-search-line text-2xl cursor-pointer" style="color: aqua;"></i>
+      </label>
+      <input type="text" id="mnav-search" placeholder="search..." class="w-[160px] border-b-2 focus:border-b-2 outline-none search">
+   </form>
+         </div>
+        </nav>
+        <!-- desktop nav -->
+        <nav class="bg-white absolute w-full 
+        left-0 -bottom-[86px] h-16 rounded-[10px] hidden 
+        lg:flex lg:items-center lg:justify-between lg:px-[50px]" style="border-radius: 7
+      25px; box-shadow: 0 0 4px rgba(255, 255, 255, 0.373);">
+         <ul class="flex gap-x-4">
+            <li><a href="#Header" style="color: #27272a"  class="my-element transition-all duration-300" >Home</a></li>
+            <li><a href="#doctors" style="color: #27272a;"  class="my-element transition-all duration-300">Doctors</a></li>
+            <li><a href="#department" style="color: #27272a;"  class="my-element transition-all duration-300">Department</a></li>
+            <li><a href="#services" style="color: #27272a;"  class="my-element transition-all duration-300">Services</a></li>
+            <li><a href="#blog" style="color: #27272a;"  class="my-element transition-all duration-300">Blog</a></li>
+            <li><a href="#contact" style="color: #27272a;"  class="my-element transition-all duration-300">Contact</a></li>
+         </ul>
+         <!-- form -->
+         <form action="" class="relative flex gap-x-[10px]">
+            <label for="search-input" class="flex justify-center items-center group">
+               <i class="ri-search-line cursor-pointer text-2xl" style="color: aqua;"></i>
+            </label>
+            <input type="text" id="search-input" class="outline-none w-[100px] focus:w-[180px] border-b-2 focus:border-b-2 search placeholder:italic transition-all duration-150" placeholder="search...">
+         </form>
+        </nav>
+    </div>
+   </header>
+   <!-- end header -->
+   <!-- start hero -->
+   <section class="hero py-12 xl:pt-12 xl:pb-0 overflow-hidden" style="background-color: #f1f5f9;">
+ <div class="container w-[90%]  mx-auto h-full">
+   <!-- text img -->
+   <div class="flex flex-col lg:flex-row items-center justify-between h-full">
+      <!-- text -->
+      <div class="hero__text xl:w-[48%] text-center lg:text-left">
+         <!-- badge -->
+         <div class="flex items-center bg-white py-[10px] px-[20px] w-max gap-x-2 mb-[26p]  rounded-full mx-auto lg:mx-0">
+            <!-- badge icon -->
+            <i class="ri-heart-pulse-line text-2xl text-[#06b6d4]"></i>
+            <div class="uppercase text-base font-meduim text-[#91b4b7] tracking-[2.24px] ">Live Your Life</div>
+         </div>
+         <!-- title -->
+   <h1 style="font-size: 40px; padding: 15px 0 ; font-weight: bold;">We Care About Your Health</h1>
+   <!-- desk -->
+   <p class="mb-[42px] md:max-w-xl ">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+      Animi eum soluta officiis, deserunt nesciunt magnam maxime sed !</p>
+   <!-- btn -->
+   <button class="  py-[10px] pr-10 pl-10 rounded-full btn-lg mx-auto xl:mx-0 outline text-[#f6f6f6] bg-[#2dd4bf] hover:bg-[#14b8a6]">contact us</button>
+      </div>
+      <!-- image -->
+      <div class="hero__img hidden lg:flex max-w-[814px] self-end">
+         <img src="assets/assets/img/hero/img.png" alt="">
+      </div>
+   </div>
+ </div>
+   </section>
+   <!-- end hero -->
+   <!-- start stats -->
+   <section class="stats section">
+   <div class=" w-[90%] container mx-auto">
+      <!-- wrapper -->
+      <div class="flex  flex-col lg:flex-row  gap-y-6 justify-between pt-20">
+         <!-- item -->
+         <div class=" stats__item flex-1  flex flex-col  items-center">
+      <div class="text-4xl xl:text-[64px] font-semibold  text-[#22d3ee] xl-mb-2">+5120</div>
+               <div>Happy Patient</div>
+      </div>
+           <!-- item -->
+           <div class=" stats__item flex-1 flex flex-col  items-center">
+            <div class="text-4xl xl:text-[64px] font-semibold  text-[#22d3ee] xl-mb-2">26</div>
+                     <div>Total Branches</div>
+            </div>
+                 <!-- item -->
+         <div class=" stats__item flex-1  flex flex-col  items-center">
+            <div class="text-4xl xl:text-[64px] font-semibold  text-[#22d3ee] xl-mb-2">+53</div>
+                     <div>Senior Doctors</div>
+            </div>
+                 <!-- item -->
+         <div class=" stats__item flex-1  flex flex-col  items-center">
+            <div class="text-4xl xl:text-[64px] font-semibold  text-[#22d3ee] xl-mb-2">+10</div>
+                     <div>Years Experience</div>
+         </div>
+      </div>
+   </div>
+   </section>
+   <!-- end stats -->
+   <!-- start services -->
+ <section class="services pt-[80px] " id="services">
+   <!-- bg -->
+   <div class="bg-[#22d3ee] bg-cover bg-no-repeat max-w-[1466px] mx-4 xl:mx-auto rounded-[20px] lg:pt-[70px] px-6 lg:px-0 relative h-[368px] flex items-center lg:items-start -z-10">
+      <div class="container mx-auto w-[90%] ">
+         <!-- text -->
+  <div class="services__top flex items-center flex-col lg:flex-row lg:mb-[60px] text-center">
+   <h2 style="font-size: 1.8rem; font-weight: bold;" class="text-white flex-1 mb-4 lg:mb-0 text-center lg:text-left ">Our Best Services For Your <br> Solution</h2>
+   <p class="text-white flex-1 text-center xl:text-left max-w-2xl xl:max-w-none ">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore assumenda quas odit dignissimos exercitationem nemo, autem quos reiciendis soluta facilis recusandae aliquid consectetur voluptate asperiores. Blanditiis eaque</p>
+  
+  </div>
+      </div>
+</div>
+<!-- grid container -->
+<div class="container w-[90%] mx-auto mt-8 lg:mt-[-144px]  grid lg:grid-cols-4 gap-5 px-8 lg:px-0 ">
+  <!-- grid item -->
+  <div class="services__item bg-[#f1f5f9] lg:bg-white p-[30px] rounded-[20px] min-h-[288px] flex flex-col items-center text-center ">
+   <!-- grid item icon -->
+   <div class="mb-[15px] ">
+      <img src="assets/assets/icons/services/icon-1.svg" alt="">
+   </div>
+   <!-- grid item title -->
+ <h3 style="font-weight: bold; font-size: 1rem;" class="mb-[10px]">General Fractitioners</h3>
+ <!-- grid item desc -->
+ <p class="font-light leading-normal max-w-[300px]">Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+  </div>
+  <!-- grid item -->
+  <div class="services__item lg:bg-white p-[30px] bg-[#f1f5f9] rounded-[20px] min-h-[288px] flex flex-col items-center text-center ">
+   <!-- grid item icon -->
+   <div class="mb-[15px] ">
+      <img src="assets/assets/icons/services/icon-2.svg" alt="">
+   </div>
+   <!-- grid item title -->
+ <h3 style="font-weight: bold; font-size: 1rem;" class="mb-[10px]">Pregnancy Support</h3>
+ <!-- grid item desc -->
+ <p class="font-light leading-normal max-w-[300px]">Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+  </div>
+  <!-- grid item -->
+  <div class="services__item bg-[#f1f5f9] lg:bg-white p-[30px] rounded-[10px] min-h-[288px] flex flex-col items-center text-center ">
+   <!-- grid item icon -->
+   <div class="mb-[15px] ">
+      <img src="assets/assets/icons/services/icon-3.svg" alt="">
+   </div>
+   <!-- grid item title -->
+ <h3 style="font-weight: bold; font-size: 1rem;" class="mb-[20px]">Nutritional Support</h3>
+ <!-- grid item desc -->
+ <p class="font-light leading-normal max-w-[300px]">Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+  </div>
+  <!-- grid item -->
+  <div class="services__item bg-[#f1f5f9] lg:bg-white p-[30px] rounded-[20px] min-h-[288px] flex flex-col items-center text-center ">
+   <!-- grid item icon -->
+   <div class="mb-[15px] ">
+      <img src="assets/assets/icons/services/icon-4.svg" alt="">
+   </div>
+   <!-- grid item title -->
+ <h3 style="font-weight: bold; font-size: 1rem;" class="mb-[10px]">Pharmaceutical Care</h3>
+ <!-- grid item desc -->
+ <p class="font-light leading-normal max-w-[300px]">Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+  </div>
+  
+</div>
+ </section>
+   <!-- end services -->
+   <!-- start appointment -->
+   <section class="appointment section">
+ <div class="container w-[90%]  mx-auto">
+ <!-- title -->
+ <h2 style="font-weight: bold; font-size: 1.8rem; " class="mb-5 lg:mb-[50px] text-center lg:text-left appointment-title">Book Appointment Or Call: <span class="text-[#6ee7b7] ">(+20)1556477029</span></h2>
+ <!-- form -->
+  <form class="flex flex-col gap-y-5 appointment__form">
+   <!-- select wrapper -->
+   <div class="flex flex-col lg:flex-row gap-5">
+      <!-- select 1 -->
+      <div class="relative flex items-center  rounded-[10px] border py-2  ">
+         <!-- icon -->
+         <div class="absolute right-4">
+            <i class="ri-arrow-drop-down-line text-[26px] text-[#0f172a]"></i>
+         </div>
+         <!-- select -->
+         <select class="appearance-none  outline-none h-full w-full bg-transpaent px-4 cursor-pointer lg:w-[400px]">
+            <option value="1" class="cursor-pointer" onmouseover="">Select Department</option>
+            <option value="2" class="cursor-pointer">Department 1</option>
+            <option value="3" class="cursor-pointer"> Department 2</option>
+            <option value="4" class="cursor-pointer">Department 3</option>
+         </select>
+      </div>
+         <!-- select 2 -->
+         <div class="relative flex items-center  rounded-[10px] border py-2">
+            <!-- icon -->
+            <div class="absolute right-4">
+               <i class="ri-arrow-drop-down-line text-[26px] text-[#0f172a]"></i>
+            </div>
+            <!-- select -->
+            <select class="appearance-none  outline-none h-full w-full bg-transpaent  cursor-pointer lg:w-[400px] px-4">
+               <option value="1" class="cursor-pointer">Select Doctor</option>
+               <option value="2" class="cursor-pointer">Dr. Jane Doe</option>
+               <option value="3" class="cursor-pointer"> Dr. Tomas</option>
+               <option value="4" class="cursor-pointer">Dr. Jhon</option>
+            </select>
+         </div>
+       <!-- input wrapper -->
+      </div>
+      <div class="flex flex-col lg:flex-row gap-5" >
+         <input type="text" class="input appearance-none outline-none border py-2 rounded-[10px] h-full px-4 w-full lg:w-[400px]" placeholder="Full Name">
+         <input type="text" class="input  appearance-none outline-none border py-2 rounded-[10px] h-full px-4 w-full lg:w-[400px]" placeholder="Phone Number">
+                </div>
+                <div class="flex flex-col lg:flex-row gap-5" >
+                  <input type="date" class="input appearance-none outline-none border py-2 rounded-[10px] h-full px-4 w-full lg:w-[400px]">
+                  <input type="time" class="input  appearance-none outline-none border py-2 rounded-[10px] h-full px-4 w-full lg:w-[400px]">
+                         </div>
+                         <!-- btn -->
+                         <button class=" mx-auto w-[200px]
+                          bg-black h-[50px] my-3 flex items-center justify-center 
+                          rounded-xl cursor-pointer relative overflow-hidden transition-all duration-500 
+                          ease-in-out shadow-md hover:scale-105 hover:shadow-lg before:absolute before:top-0 
+                          before:-left-full before:w-full before:h-full before:bg-gradient-to-r 
+                          before:from-[#009b49] before:to-[rgb(105,184,141)] 
+                          before:transition-all before:duration-500 before:ease-in-out 
+                          before:z-[-1] before:rounded-xl hover:before:left-0 text-[#fff]">
+                           Book an Appointment
+                         </button>
+                       
+  </form>
+    </div>
+   </section>
+   <!-- end appointment -->
+<!--start Testmonials-->
+<section class="Testmonials bg-[#f1f5f9] bg-cover bg-no-repeat py-12 mt-[40px] bg-right lg:min-h-[595px] lg:py-0 ">
+<div class=" Testmonials__container container w-[90%]  mx-auto">
+  <div class="flex flex-col items-center  gap-x-14 lg:flex-row ">
+   <!-- img -->
+ <div class="hidden lg:flex ">
+   <img src="assets/assets/img/testimonials/img.png" alt="" class="select-none">
+ </div>
+ <!-- slider -->
+ <div class="max-w-[98%] lg:max-w-[710px]">
+   <!-- Slider main container -->
+<div class="swiper h-[400px]">
+   <!-- Additional required wrapper -->
+   <div class="swiper-wrapper">
+     <!-- Slide 1-->
+     <div class="swiper-slide">
+      <div class="h-full flex flex-col justify-center items-start">
+         <div class="max-w-[680px] mx-auto text-center lg:text-left">
+            <div  class="flex items-center">
+               <img src="assets/assets/img/test/istockphoto-1388644810-612x612_preview_rev_1.png" alt="" 
+               class="max-w-[20%] mx-auto mb-7 rounded-[45px] bg-[#5eead4]">
+            </div>
+         <p class="font-light relative text-[22px] text-[#45354] leading-[198%] 
+         text-center 
+         lg:text-left mb-7">
+            <!-- message -->
+            <span class="mx-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+               Reiciendis suscipit tempora accusantium illum, eligendi necessitatibus
+              </span>
+         </p>
+         <!-- name -->
+         <div class="text-[26px] text-[#4c5354] font-semibold">
+          Mahmoud Elhout
+         </div>
+         <!-- jop -->
+         <div class="text-[#9ab4b7] font-meduim uppercase 
+         tracking-[2.24]">
+            Customer
+         </div>
+      </div>
+     </div>
+   </div>
+    <!-- Slide 2-->
+    <div class="swiper-slide">
+      <div class="h-full flex flex-col justify-center items-start">
+         <div class="max-w-[680px] mx-auto text-center lg:text-left">
+            <div  class="flex items-center">
+               <img src="assets/assets/img/test/istockphoto-1364917563-612x612_preview_rev_1.png" alt="" 
+               class="max-w-[20%] mx-auto mb-7  rounded-[45px] bg-[#5eead4]">
+            </div>
+         <p class="font-light relative text-[22px] text-[#45354] leading-[198%] 
+         text-center 
+         lg:text-left mb-7">
+            <!-- message -->
+            <span class="mx-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+               Reiciendis suscipit tempora accusantium illum, eligendi necessitatibus
+              </span>
+         </p>
+         <!-- name -->
+         <div class="text-[26px] text-[#4c5354] font-semibold">
+         Abdelwhab Anwar
+         </div>
+         <!-- jop -->
+         <div class="text-[#9ab4b7] font-meduim uppercase 
+         tracking-[2.24]">
+            Customer
+         </div>
+      </div>
+     </div>
+   </div>
+     <!-- Slide 3-->
+     <div class="swiper-slide">
+      <div class="h-full flex flex-col justify-center items-start">
+         <div class="max-w-[680px] mx-auto text-center lg:text-left">
+            <div class="flex items-center">
+               <img src="assets/assets/img/test/istockphoto-1331257339-612x612_preview_rev_1.png" alt="" 
+               class="max-w-[20%] mx-auto mb-7  rounded-[45px] bg-[#5eead4]">
+            </div>
+         <p class="font-light relative text-[22px] text-[#45354] leading-[198%] 
+         text-center 
+         lg:text-left mb-7">
+            <!-- message -->
+            <span class="mx-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+               Reiciendis suscipit tempora accusantium illum, eligendi necessitatibus
+              </span>
+         </p>
+         <!-- name -->
+         <div class="text-[26px] text-[#4c5354] font-semibold">
+            Saad Harera
+         </div>
+         <!-- jop -->
+         <div class="text-[#9ab4b7] font-meduim uppercase 
+         tracking-[2.24]">
+            Customer
+         </div>
+      </div>
+     </div>
+   </div>
+   </div>
+   <!-- swiper pagination -->
+   <div class="swiper-pagination"></div>
+   </div>
+ </div>
+ </div>
+</div>
+</section>
+<!--end Testmonials-->
+<!-- start team -->
+<section class="team section" id="doctors">
+   <div class="container w-[90%]  mx-auto">
+      <!-- title -->
+      <h2 class="heading mb-[50px] text-center lg:text-left mt-[20px] team__title">Our Team</h2>
+      <!-- slider -->
+      <div class="team__slider swiper min-h-[400px]">
+        <!-- Additional required wrapper -->
+         <div class="swiper-wrapper">
+            <!-- Slide 1-->
+            <div class="swiper-slide">
+               <div class="flex flex-col md:flex-row  gap-9">
+                  <!-- item 1 -->
+                  <div class="flex-1 flex flex-col lg:flex-row">
+                     <div class="flex flex-col lg:flex-row  items-center gap-[30px]">
+                        <!-- img -->
+                        <div class="flex-1">
+                           <img src="assets/assets/img/team/doctor-1.png" alt="">
+                        </div>
+                        <!-- info -->
+                        <div class="flex-1 flex flex-col">
+                           <!-- name -->
+                          <h4 class="mb-[10px] px-[5px]">Dr. Leslie Taylor</h4>
+                          <!--job -->
+                          <div class="font-meduim uppercase tracking-[2.24] text-[#9ab4b7] mb-[20px] px-[5px]">Pediatrician</div>
+                          <!-- desc -->
+                          <p class="font-light mb-[26px] max-w-[320px] px-[5px]">
+                           Dr. Leslie Taylor is a compassionate and dedicated pediatrician 
+                           known for her exceptional care and expertise in child health. 
+                           With a gentle demeanor and a genuine passion for children's well-being, </p>
+                           <!--socials --> 
+    <div class="flex items-center text-[36px] gap-x-5 text-[#93c5fd] px-[5px]">
+                              <a href="" class="cursor-pointer transition-all hover:text-[#ef4444]">
+                                 <i class="ri-youtube-fill "></i>
+                              </a>
+                              <a href="" class="cursor-pointer transition-all hover:text-[#1d4ed8]">
+                                 <i class="ri-facebook-circle-fill"></i>
+                              </a>
+                              <a href="" class="cursor-pointer transition-all hover:text-[#d946ef]">
+                                 <i class="ri-instagram-fill"></i>
+                              </a>
+                              <a href="" class="cursor-pointer transition-all hover:text-[#e11d48]">
+                                 <i class="ri-pinterest-fill"></i>
+                              </a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- item 2 -->
+                  <div class="flex-1 flex flex-col lg:flex-row">
+                     <div class="flex flex-col lg:flex-row  items-center gap-[30px]">
+                        <!-- img -->
+                        <div class="flex-1">
+                           <img src="assets/assets/img/team/doctor-2.png" alt="">
+                        </div>
+                        <!-- info -->
+                        <div class="flex-1 flex flex-col">
+                           <!-- name -->
+                          <h4 class="mb-[10px] px-[5px]">Dr. Zachary Brown</h4>
+                          <!--job -->
+                          <div class="font-meduim uppercase tracking-[2.24] text-[#9ab4b7] mb-[20px] px-[5px]">Cardiologist</div>
+                          <!-- desc -->
+                          <p class="font-light mb-[26px] max-w-[320px] px-[5px]">
+                           Dr. Zachary is a renowned cardiologist with a sterling reputation in the medical community. He completed his medical training at a prestigious university and pursued further specialization in cardiology 
+                           due to his passion  </p>
+                           <!--socials -->
+    <div class="flex items-center text-[36px] gap-x-5 text-[#93c5fd] px-[5px]">
+                              <a href="" class="cursor-pointer transition-all hover:text-[#ef4444]">
+                                 <i class="ri-youtube-fill "></i>
+                              </a>
+                              <a href="" class="cursor-pointer transition-all hover:text-[#1d4ed8]">
+                                 <i class="ri-facebook-circle-fill"></i>
+                              </a>
+                              <a href="" class="cursor-pointer transition-all hover:text-[#d946ef]">
+                                 <i class="ri-instagram-fill"></i>
+                              </a>
+                              <a href="" class="cursor-pointer transition-all hover:text-[#e11d48]">
+                                 <i class="ri-pinterest-fill"></i>
+                              </a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+          </div>
+           <!-- Slide 2-->
+           <div class="swiper-slide">
+            <div class="flex flex-col md:flex-row  gap-9">
+               <!-- item 1 -->
+               <div class="flex-1 flex flex-col lg:flex-row">
+                  <div class="flex flex-col lg:flex-row  items-center gap-[30px]">
+                     <!-- img -->
+                     <div class="flex-1">
+                        <img src="assets/assets/img/team/تنزيل (3).jpeg" alt=""  style="max-width: 100%;">
+                     </div>
+                     <!-- info -->
+                     <div class="flex-1 flex flex-col">
+                        <!-- name -->
+                       <h4 class="mb-[10px] px-[5px]">Dr. Daniel Robert</h4>
+                       <!--job -->
+                       <div class="font-meduim uppercase tracking-[2.24] text-[#9ab4b7] mb-[20px] px-[5px]">ONCOLOGY</div>
+                       <!-- desc -->
+                       <p class="font-light mb-[26px] max-w-[320px] px-[5px]">
+                        Dr. Daniel Robert is a distinguished oncologist, widely recognized for her exceptional expertise and compassionate approach to cancer care  Her compassionate bedside manner helps alleviate anxiety  </p>
+                        <!--socials -->
+ <div class="flex items-center text-[36px] gap-x-5 text-[#93c5fd] px-[5px]">
+                           <a href="" class="cursor-pointer transition-all hover:text-[#ef4444]">
+                              <i class="ri-youtube-fill "></i>
+                           </a>
+                           <a href="" class="cursor-pointer transition-all hover:text-[#1d4ed8]">
+                              <i class="ri-facebook-circle-fill"></i>
+                           </a>
+                           <a href="" class="cursor-pointer transition-all hover:text-[#d946ef]">
+                              <i class="ri-instagram-fill"></i>
+                           </a>
+                           <a href="" class="cursor-pointer transition-all hover:text-[#e11d48]">
+                              <i class="ri-pinterest-fill"></i>
+                           </a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- item 2 -->
+               <div class="flex-1 flex flex-col lg:flex-row">
+                  <div class="flex flex-col lg:flex-row  items-center gap-[30px]">
+                     <!-- img -->
+                     <div class="flex-1">
+                        <img src="assets/assets/img/team/images.jpeg" alt=""  style="max-width: 100%;">
+                     </div>
+                     <!-- info -->
+                     <div class="flex-1 flex flex-col">
+                        <!-- name -->
+                       <h4 class="mb-[10px] px-[5px]">Dr. JOHN SNOW</h4>
+                       <!--job -->
+                       <div class="font-meduim uppercase tracking-[2.24] text-[#9ab4b7] mb-[20px] px-[5px]">HEMATOLOGIST</div>
+                       <!-- desc -->
+                       <p class="font-light mb-[26px] max-w-[320px] px-[5px]">
+                        is a distinguished hematologist renowned for her expertise in diagnosing and treating various blood disorders. She completed her medical education at a prestigious institution and pursued further specialization in 
+                        hematology </p>
+                        <!--socials -->
+ <div class="flex items-center text-[36px] gap-x-5 text-[#93c5fd] px-[5px]">
+                           <a href="" class="cursor-pointer transition-all hover:text-[#ef4444]">
+                              <i class="ri-youtube-fill "></i>
+                           </a>
+                           <a href="" class="cursor-pointer transition-all hover:text-[#1d4ed8]">
+                              <i class="ri-facebook-circle-fill"></i>
+                           </a>
+                           <a href="" class="cursor-pointer transition-all hover:text-[#d946ef]">
+                              <i class="ri-instagram-fill"></i>
+                           </a>
+                           <a href="" class="cursor-pointer transition-all hover:text-[#e11d48]">
+                              <i class="ri-pinterest-fill"></i>
+                           </a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+       </div>
+        <!-- Slide 3-->
+         <div class="swiper-slide">
+            <div class="flex flex-col md:flex-row  gap-9">
+               <!-- item 1 -->
+               <div class="flex-1 flex flex-col lg:flex-row">
+                  <div class="flex flex-col lg:flex-row  items-center gap-[30px]">
+                     <!-- img -->
+                     <div class="flex-1">
+                        <img src="assets/assets/img/team/تنزيل (1).jpeg" alt=""  style="max-width: 100%;">
+                     </div>
+                     <!-- info -->
+                     <div class="flex-1 flex flex-col">
+                        <!-- name -->
+                       <h4 class="mb-[10px] px-[5px]">Dr. Magdy Yaqoub </h4>
+                       <!--job -->
+                       <div class="font-meduim uppercase tracking-[2.24] text-[#9ab4b7] mb-[20px] px-[5px]">CARDIAC SURGEON</div>
+                       <!-- desc -->
+                       <p class="font-light mb-[26px] max-w-[320px] px-[5px]">
+                        Magdi Yacoub is a prominent figure known for his groundbreaking contributions to cardiac surgery Yacoub's contributions to cardiac surgery have had a profound impact on the field.</p>
+                        <!--socials -->
+ <div class="flex items-center text-[36px] gap-x-5 text-[#93c5fd] px-[5px]">
+                           <a href="" class="cursor-pointer transition-all hover:text-[#ef4444]">
+                              <i class="ri-youtube-fill "></i>
+                           </a>
+                           <a href="" class="cursor-pointer transition-all hover:text-[#1d4ed8]">
+                              <i class="ri-facebook-circle-fill"></i>
+                           </a>
+                           <a href="" class="cursor-pointer transition-all hover:text-[#d946ef]">
+                              <i class="ri-instagram-fill"></i>
+                           </a>
+                           <a href="" class="cursor-pointer transition-all hover:text-[#e11d48]">
+                              <i class="ri-pinterest-fill"></i>
+                           </a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- item 2 -->
+               <div class="flex-1 flex flex-col lg:flex-row">
+                  <div class="flex flex-col lg:flex-row  items-center gap-[30px]">
+                     <!-- img -->
+                     <div class="flex-1">
+                        <img src="assets/assets/img/team/تنزيل (2).jpeg" alt="" style="max-width: 100%;">
+                     </div>
+                     <!-- info -->
+                     <div class="flex-1 flex flex-col">
+                        <!-- name -->
+                       <h4 class="mb-[10px] px-[5px]">Dr. Hany Abdelgwad</h4>
+                       <!--job -->
+                       <div class="font-meduim uppercase tracking-[2.24] text-[#9ab4b7] mb-[20px] px-[5px]">SPINAL SURGEON</div>
+                       <!-- desc -->
+                       <p class="font-light mb-[26px] max-w-[320px] px-[5px]">
+                 
+Dr. Hany Abdel Gawad is a highly skilled spinal surgeon known for his expertise in treating disorders and conditions affecting 
+the spinal column. With a background in orthopedic or neurosurgery </p>
+                        <!--socials -->
+ <div class="flex items-center text-[36px] gap-x-5 text-[#93c5fd] px-[5px]">
+                           <a href="" class="cursor-pointer transition-all hover:text-[#ef4444]">
+                              <i class="ri-youtube-fill "></i>
+                           </a>
+                           <a href="" class="cursor-pointer transition-all hover:text-[#1d4ed8]">
+                              <i class="ri-facebook-circle-fill"></i>
+                           </a>
+                           <a href="" class="cursor-pointer transition-all hover:text-[#d946ef]">
+                              <i class="ri-instagram-fill"></i>
+                           </a>
+                           <a href="" class="cursor-pointer transition-all hover:text-[#e11d48]">
+                              <i class="ri-pinterest-fill"></i>
+                           </a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         </div>
+          <!-- swiper pagination -->
+          <div class="swiper-pagination"></div>
+       </div>
+   </div>
+</section>
+<!-- end team -->
+<!--START FAQ   -->
+<section class="faq">
+   <div class="container w-[90%]  mx-auto">
+      <h2 style="font-size: 1.8rem; font-weight: bold; " class="faq__title 
+      text-center mt-[15px] mb-[50px]">We 've Got Answers </h2>
+      <!-- item wrapper -->
+      <div class="max-w-5xl mx-auto">
+         <!-- item 1 -->
+         <div class="faq__item px-[30px] pt-7 pb-4 border-b cursor-pointer select-none">
+<!-- title & icon -->
+    <div class="flex items-center justify-between mb-[10px] ">
+      <!-- title -->
+      <h4 class="h4">Why To Believe In Insove Medical Healthcare ?</h4>
+      <!-- icon -->
+      <div class="faq__btn  text-[#2dd4bf] cursor-pointer">
+         <i class="ri-add-line text-2xl"></i>
+      </div>
+    </div>
+    <!-- answer -->
+    <div class="faq__answer h-0 overflow-hidden">
+      <p class="font-light ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore sit sapiente accusamus, 
+         voluptate, porro repellat, asperiores laborum error repudiandae dolorem quo qui voluptatem neque
+         . Repellendus, debitis. Quas tenetur sequi doloremque.</p>
+    </div>
+         </div>
+           <!-- item 2-->
+           <div class="faq__item px-[30px] pt-7 pb-4 border-b cursor-pointer select-none">
+            <!-- title & icon -->
+                <div class="flex items-center justify-between mb-[10px] ">
+                  <!-- title -->
+                  <h4 class="h4">Will We Get Healthcare Updates After Surgery ?</h4>
+                  <!-- icon -->
+                  <div class="faq__btn  text-[#2dd4bf] cursor-pointer">
+                     <i class="ri-add-line text-2xl"></i>
+                  </div>
+                </div>
+                 <!-- answer -->
+    <div class="faq__answer h-0 overflow-hidden">
+      <p class="font-light ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore sit sapiente accusamus, 
+         voluptate, porro repellat, asperiores laborum error repudiandae dolorem quo qui voluptatem neque
+         . Repellendus, debitis. Quas tenetur sequi doloremque.</p>
+    </div>
+                     </div>
+                       <!-- item3 -->
+         <div class="faq__item px-[30px] pt-7 pb-4 border-b cursor-pointer select-none">
+            <!-- title & icon -->
+                <div class="flex items-center justify-between mb-[10px] ">
+                  <!-- title -->
+                  <h4 class="h4">What Preparation Are Necessary Before Undergoing Surgery ?</h4>
+                  <!-- icon -->
+                  <div class="faq__btn  text-[#2dd4bf] cursor-pointer">
+                     <i class="ri-add-line text-2xl"></i>
+                  </div>
+                </div>
+                 <!-- answer -->
+    <div class="faq__answer h-0 overflow-hidden">
+      <p class="font-light ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore sit sapiente accusamus, 
+         voluptate, porro repellat, asperiores laborum error repudiandae dolorem quo qui voluptatem neque
+         . Repellendus, debitis. Quas tenetur sequi doloremque.</p>
+    </div>
+                     </div>
+                       <!-- item 4-->
+         <div class="faq__item px-[30px] pt-7 pb-4 border-b cursor-pointer select-none">
+            <!-- title & icon -->
+                <div class="flex items-center justify-between mb-[10px] ">
+                  <!-- title -->
+                  <h4 class="h4">How Long Will It Take To Recover After The Surgery ?</h4>
+                  <!-- icon -->
+                  <div class="faq__btn  text-[#2dd4bf] cursor-pointer">
+                     <i class="ri-add-line text-2xl"></i>
+                  </div>
+                </div>
+                 <!-- answer -->
+    <div class="faq__answer h-0 overflow-hidden">
+      <p class="font-light ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore sit sapiente accusamus, 
+         voluptate, porro repellat, asperiores laborum error repudiandae dolorem quo qui voluptatem neque
+         . Repellendus, debitis. Quas tenetur sequi doloremque.</p>
+    </div>
+                     </div>
+      </div>
+   </div> 
+</section>
+<!--end FAQ   -->
+<!-- start department -->
+<section class="department section" id="department">
+ <div class="department__bg bg-[#f1f5f9] bg-cover lg:bg-auto bg-center bg-no-repeat 
+ max-w-[1466px] mx-4 lg:mx-auto rounded-[20px] px-6 lg:px-0 py-12 lg:pt-[80px]
+  lg:pb-[90px] relative min-h-[588px] 
+ flex items-center mt-12">
+   <div class="department__container w-[90%]  container mx-auto">
+      <div class="flex flex-col lg:flex-row gap-x-5 ">
+ <div class="lg:w-[310px flex flex-col gap-y-[30px] lg:gap-y-[40px] font-meduim uppercase
+ text-center lg:text-left text-base text-[#9ab4b7] lg:pt-3 
+ lg:text-[17px] mb-[50px] lg:mb-0 ">
+   <div class="cursor-pointer hover:text-[#06b6d4] transition-all ">Laboratory Analysis</div>
+   <div class="cursor-pointer hover:text-[#06b6d4] transition-all ">Cardiology Clinic</div>
+   <div class="cursor-pointer hover:text-[#06b6d4] transition-all ">Gynecology Clinic</div>
+   <div class="cursor-pointer hover:text-[#06b6d4] transition-all ">Pathology Clinic</div>
+   <div class="cursor-pointer hover:text-[#06b6d4] transition-all ">Pediatrics Clinic</div>
+   <div class="cursor-pointer hover:text-[#06b6d4] transition-all ">Neorology Clinic</div>
+ </div>
+ <div class="lg:w-[640px]">
+   <!-- title -->
+   <h2 style="font-size: 1.8rem; font-weight: bold;" class="mb-[20px] text-center lg:text-left">Cardiology Clinic</h2>
+   <!-- desc -->
+   <p class="mb-[30px] font-light text-center lg:text-left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio laudantium 
+      illum voluptatibus deserunt aliquid, et quia,
+       rerum doloribus perferendis velit repellendus nihil pariatur.
+      <br> <br>
+   Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+   Aut deserunt est, accusamus commodi pariatur veritatis 
+    quisquam praesentium fuga! Commodi beatae sit quisquam.</p>
+   <div class="flex flex-col lg:flex-row items-center lg:justify-between
+   max-w-[555px] mb-[50px] mx-auto lg:mx-0 ">
+      <div class="text-[#2dd4bf] lg:border-r border-[#dcdcdc] lg:pr-6">Neurocritical Care</div>
+      <div class="text-[#2dd4bf]  lg:border-r border-[#dcdcdc] lg:pr-6">Neuro Oncology</div>
+      <div class="text-[#2dd4bf]"> Geriatric Neurology</div>
+   </div>
+   <button class="relative px-8 py-2 bg-white isolation-auto z-10 border-2 border-[#2dd4bf]
+   before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full
+    before:-right-full before:hover:right-0 before:rounded-full  before:bg-[#2dd4bf] before:-z-10 
+    before:aspect-square before:hover:scale-150 overflow-hidden before:hover:duration-700
+     rounded-[20px] mx-auto lg:mx-0 btn-lg relative left-[50%] translate-x-[-50%] lg:left-0 lg:translate-x-0">See More</button>
+ </div>
+      </div>
+   </div>
+ </div>
+</section>
+<!-- end department -->
+<!-- start blog -->
+<section class="blog " id="blog">
+<div class="container w-[90%]  mx-auto">
+   <h2 style="font-size: 1.8rem; font-weight: bold;" class="blog__title mb-[50px] 
+   text-center lg:text-left mt-[25px]">Our Recents Posts</h2>
+   <!-- blog posts -->
+   <div class="flex flex-col lg:flex-row gap-y-6 lg:gap-y-0 items-center lg:justify-between
+   mb-[50px] ">
+      <!-- post 1 -->
+      <div class="blog__post max-w-[420px] rounded-[10px] overflow-hidden 
+      cursor-pointer group lg:mx-[10px] w-[100%]">
+         <!-- img -->
+         <div class="relative overflow-hidden ">
+  <img src="assets/assets/img/blog/img-1.png" alt="" class="select-none group-hover:scale-110 transition-all 
+  duration-500">
+  <!-- badge -->
+  <div class="bg-[#f1f5f9]  absolute bottom-0 text-base tracking-[2.24px] font-meduim 
+  uppercase py-[6px] px-[18px]">
+   Medical
+  </div>
+         </div>
+         <!-- text -->
+         <div class="px-5 py-6 bg-white">
+         <!-- date -->
+         <div class="mb-4">Jan 2, 2023</div>
+         <!-- title -->
+         <h4 style="font-size: 1.2rem; font-weight: bold;" class="mb-[10px]">10 foods to avoid for your heart health </h4>
+         <!-- desc -->
+         <p class="font-light ">it`s normal to feel anxiety,
+             worry and grief any time you are 
+            diagnosed with a condition that`s certainely
+         </p>
+        <div class="hidden content" >
+         <span >Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            Doloremque illum in voluptates consequuntur voluptate, quas praesentium,
+            excepturi voluptatem maxime soluta enim tempore culpa maiores 
+            quibusdam magni minus alias. Debitis, nisi!</span>
+        </div>
+        <a href="" class="italic underline text-[#4c5354] show-more-btn" >Read More</a>
+         </div>
+
+      </div>
+      <!-- post 2 -->
+      <div class="blog__post max-w-[420px] rounded-[10px] overflow-hidden 
+      cursor-pointer group  lg:mx-[10px] w-[100%]">
+         <!-- img -->
+         <div class="relative overflow-hidden ">
+  <img src="assets/assets/img/blog/img-2.png" alt="" class="select-none group-hover:scale-110 transition-all 
+  duration-500">
+  <!-- badge -->
+  <div class="bg-[#f1f5f9]  absolute bottom-0 text-base tracking-[2.24px] font-meduim 
+  uppercase py-[6px] px-[18px]">
+   Medical
+  </div>
+         </div>
+         <!-- text -->
+         <div class="px-5 py-6 bg-white">
+         <!-- date -->
+         <div class="mb-4">Jan 2, 2023</div>
+         <!-- title -->
+         <h4 style="font-size: 1.2rem; font-weight: bold;" class="mb-[10px]">
+            Understanding the Role of Exercise</h4>
+         <!-- desc -->
+         <p class="font-light ">it`s normal to feel anxiety,
+            worry and grief any time you are 
+           diagnosed with a condition that`s certainely
+        </p>
+     <div class="hidden content">
+      <span class=""  >Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+         Doloremque illum in voluptates consequuntur voluptate, quas praesentium,
+         excepturi voluptatem maxime soluta enim tempore culpa maiores 
+         quibusdam magni minus alias. Debitis, nisi!</span>
+     </div>
+     <a href="" class="italic underline text-[#4c5354] show-more-btn" >Read More</a>
+         </div>
+
+      </div>
+      <!-- post 3 -->
+      <div class="blog__post max-w-[420px] rounded-[10px] overflow-hidden 
+      cursor-pointer group lg:mx-[10px] w-[100%]">
+         <!-- img -->
+         <div class="relative overflow-hidden ">
+  <img src="assets/assets/img/blog/img-3.png" alt="" class="select-none group-hover:scale-110 transition-all 
+  duration-500">
+  <!-- badge -->
+  <div class="bg-[#f1f5f9]  absolute bottom-0 text-base tracking-[2.24px] font-meduim 
+  uppercase py-[6px] px-[18px]">
+   Medical
+  </div>
+         </div>
+         <!-- text -->
+         <div class="px-5 py-6 bg-white">
+         <!-- date -->
+         <div class="mb-4">Jan 2, 2023</div>
+         <!-- title -->
+         <h4 style="font-size: 1.2rem; font-weight: bold;" class="mb-[10px]">
+            The Importance of Hydration for Overall Health </h4>
+         <!-- desc -->
+         <p class="font-light ">it`s normal to feel anxiety,
+            worry and grief any time you are 
+           diagnosed with a condition that`s certainely
+        </p>
+     <div class="hidden content">
+      <span >Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+         Doloremque illum in voluptates consequuntur voluptate, quas praesentium,
+         excepturi voluptatem maxime soluta enim tempore culpa maiores 
+         quibusdam magni minus alias. Debitis, nisi!</span>
+     </div>
+     <a href="" class="italic underline text-[#4c5354] show-more-btn" >Read More</a>
+         </div>
+
+      </div>
+   </div>
+</div>
+</section>
+<!--end blog -->
+<!-- start brands -->
+<section class="brands section">
+ <div class="container w-[90%]  mx-auto">
+   <h2 class="py-[15px] text-center lg:text-left mb-[10px] text-xl lg:text-2xl font-bold" >Companies We Deal With</h2>
+   <div class="flex flex-col lg:flex-row gap-y-12 lg:gap-y-0 justify-between
+   items-center ">
+      <img class="brands__logo hover:scale-110" src="assets/assets/img/brands/brand-1.svg" alt="">
+      <img class="brands__logo hover:scale-110" src="assets/assets/img/brands/brand-2.svg" alt="">
+      <img class="brands__logo hover:scale-110" src="assets/assets/img/brands/brand-3.svg" alt="">
+      <img class="brands__logo hover:scale-110" src="assets/assets/img/brands/brand-4.svg" alt="">
+      <img class="brands__logo hover:scale-110" src="assets/assets/img/brands/brand-5.svg" alt="">
+   </div>
+ </div>
+</section>
+<!-- end brands -->
+<!-- start newsletter -->
+<section class="newsletter bg-[#0ea5e9] md:h-[444px] py-12 flex items-center relative 
+overflow-hidden mt-[60px]" >
+<!-- pattern -->
+<div class="absolute left-0 bottom-0">
+   <img src="assets/assets/img/newsletter/pattern.svg" alt="" class="select-none">
+</div>
+   <!-- container -->
+   <div class="newsletter__container w-[90%]  container mx-auto ">
+ <!-- wrapper -->
+ <div class="flex flex-col md:flex-row lg:items-center lg:gap-x-[58px] ">
+   <!-- text -->
+   <div class="flex-1 z-10 text-center md:text-left">
+      <div class="text-base uppercase text-white tracking-[2.24px] font-meduim ">Our Newsletter</div>
+      <h1 class="text-xl lg:text-4xl mb-4 text-white">Subscribe To Get More ubdates </h1>
+   </div>
+   <!-- form -->
+   <form action="" class="flex-1">
+      <div class="flex flex-col md:flex-row relative gap-y-4">
+         <input type="text" placeholder=" Your Email Address " class="rounded-full w-full h-[50px] bg-transparent 
+         border-2 border-white outline-none pl-[30px] placeholder:text-white focus:text-white">
+         <button id="btn" class="btn-lg  bg-white md:absolute right-0 rounded-full py-3 px-6 lg:py-3 lg:px-12 text-[#a5b4fc] uppercase ">Subscribe</button>
+      </div>
+   </form>
+ </div>
+         </div>
+</section>
+<!--end newsletter -->
+<!-- start footer -->
+<footer class="footer pt-12 lg:pt-[150px] " id="contact">
+   <div class="w-[90%]  container mx-auto pb-12 lg:pb-[100px] ">
+      <div class="flex flex-col lg:flex-row gap-x-5 gap-y-10">
+         <!-- footer contact section -->
+         <div class="footer__item flex-1 flex items-center flex-col lg:items-start">
+            <!-- logo -->
+            <a href="">
+               <img class="mb-[30px] " src="assets/assets/img/header/logo.svg" alt="">
+            </a>
+            <!-- desc -->
+            <p class="mb-[20px] text-center lg:text-left">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <!-- location , email ,  phone -->
+            <div class="flex flex-col  gap-y-3 mb-10">
+             <div class="flex items-center gap-x-[6px]">
+                <i class="ri-map-pin-fill text-[24px] " style="color: aqua;"></i>
+               <div class="">123 Arling, Miola, NY </div>
+            </div>
+             <div class="flex items-center gap-x-[6px]">
+               <i class="ri-mail-fill text-[24px]"  style="color: aqua;"></i>
+               <div class="">insove@email.com</div>
+            </div>
+             <div class="flex items-center gap-x-[6px]">
+               <i class="ri-phone-fill  text-[24px]"  style="color: aqua;"></i>
+               <div class="">(+20) 1556477029</div>
+            </div>
+             </div>
+             <!-- socials -->
+             <div class="flex gap-[14px] text-[30px]">
+               <div class="p-[10px] rounded-[10px] ">
+                 <a href="https://www.facebook.com/profile.php?id=100055443862311" target="_blank">
+                  <i class="ri-facebook-circle-fill text-[#93c5fd] hover:text-[#1d4ed8] transition-all
+                  "></i>
+                 </a>
+               </div>
+               <div class="p-[10px] rounded-[10px] ">
+                 <a href="" target="_blank">
+                  <i class="ri-instagram-fill text-[#93c5fd] hover:text-[#9333ea] transition-all"></i>
+                 </a>
+               </div>
+               <div class="p-[10px] rounded-[10px] ">
+                 <a href="" target="_blank">
+                  <i class="ri-twitter-fill  text-[#93c5fd] hover:text-[#22d3ee] transition-all"></i>
+                 </a>
+               </div>
+               <div class="p-[10px] rounded-[10px] ">
+                 <a href="https://www.linkedin.com/in/saad-harera-a5423a2b8" target="_blank">
+                  <i class="ri-linkedin-box-fill text-[#93c5fd] hover:text-[#2563eb] transition-all "></i>
+                 </a>
+               </div>
+             </div>
+         </div>
+         <!-- footer quick links section -->
+         <div class="footer__item flex-1 px-[10px]">
+    <h4 class="mb-5 " style="font-size: 1.1rem; font-weight: 600;">Quick Links</h4>
+    <div class="flex gap-x-5 ">
+      <!-- list 1 -->
+      <ul class="flex-1 flex flex-col gap-y-5">
+         <li><a href="#Header" class="hover:text-[#2dd4bf] transition-all">Home</a></li>
+         <li><a href="#doctors" class="hover:text-[#2dd4bf] transition-all">Doctors</a></li>
+         <li><a href="#department" class="hover:text-[#2dd4bf] transition-all">Department</a></li>
+         <li><a href="#services" class="hover:text-[#2dd4bf] transition-all">Services</a></li>
+         <li><a href="#blog" class="hover:text-[#2dd4bf] transition-all">Blog</a></li>
+      </ul>
+      <!-- list 2 -->
+      <ul class="flex-1 flex flex-col gap-y-5">
+         <li><a href="" class="hover:text-[#2dd4bf] transition-all">Our Pricing</a></li>
+         <li><a href="#" class="hover:text-[#2dd4bf] transition-all">Contact</a></li>
+         <li><a href="#" class="hover:text-[#2dd4bf] transition-all">Careers</a></li>
+         <li><a href="#" class="hover:text-[#2dd4bf] transition-all">Faqs</a></li>
+         <li><a href="#" class="hover:text-[#2dd4bf] transition-all">Privacy Policy</a></li>
+      </ul>
+    </div>
+         </div>
+         <!-- footer opening hours section -->
+         <div class="footer__item flex-1 px-[10px]">
+    <h4 class="mb-5" style="font-size: 1.1rem; font-weight: 600;">Opening Hours</h4>
+    <!-- list -->
+    <div class="flex flex-col  gap-5 ">
+      <!-- item -->
+      <div class="flex-1">
+         <div class="flex justify-between items-center border-b pb-[10px]">
+            <div>Monday - Thursday</div>
+            <div style="color: aqua;" class="font-meduim">8:00 Am - 6:00 pm</div>
+         </div>
+      </div>
+      <!-- item -->
+      <div class="flex-1">
+         <div class="flex justify-between items-center border-b pb-[10px]">
+            <div>Friday - Saturday</div>
+            <div style="color: aqua;" class="font-meduim">10:00 Am - 4:00 pm</div>
+         </div>
+      </div>
+      <!-- item -->
+      <div class="flex-1">
+         <div class="flex justify-between items-center border-b pb-[10px]">
+            <div>Sunday</div>
+            <div style="color: aqua;" class="font-meduim">Emergency Only</div>
+         </div>
+      </div>
+      <!-- item -->
+      <div class="flex-1">
+         <div class="flex justify-between items-center border-b pb-[10px]">
+            <div> Interviews</div>
+            <div style="color: aqua;" class="font-meduim">7:00 Am - 9:00 pm</div>
+         </div>
+      </div>
+    </div>
+         </div>
+      </div>
+   </div>
+   <!-- copy right -->
+   <div class="py-[30px] border-t ">
+      <div class="container mx-auto text-center">
+         <div class="font-light text-base">&copy; 2024 Insove - All Right Reserved. By <span class="text-[#22d3ee]">Saad Harera</span></div>
+      </div>
+   </div>
+</footer>
+<!-- end footer -->
+   <!-- start temp div -->
+   <!-- <div class="h-[4000px]">
+
+   </div> -->
+   <!--end temp div -->
+        <!-- scripts swiper -->
+        <script src="js/swiper-bundle.min.js">
+        </script>
+        <!-- scroll -->
+        <script src="js/scrollreveal.min.js"></script>
+        <!-- main js -->
+        <script src="js/main.js"></script>
+</body>
+</html>
